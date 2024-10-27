@@ -1,0 +1,61 @@
+<!--  Demo of 3D Rotations. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>3D Rotations</title>
+</head>
+
+<body>
+	<canvas id="theCanvas" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+<!-- Some radio buttons to select intrinsic or extrinsic transformations -->
+<p>
+<input id = "checkExtrinsic" name="inOrEx" type="radio" checked /> Extrinsic (multiply on left)
+<br>
+<input id = "checkIntrinsic" name="inOrEx" type="radio" /> Intrinsic (multiply on right)
+<br>
+<p>
+
+Current transformation matrix:
+<br>
+<div id="displayMatrices" style="background-color:#dddddd">
+I
+</div>
+<br>
+Rotation increment:
+<input id = "incrementBox"  type="text" value="45" size=6/>
+<br>
+
+Keyboard controls:
+<ul style="list-style:none;">
+	<li>d - rotate camera 15 degrees around y-axis
+	<li>D - rotate camera direction -15 degrees around y-axis
+	<li>e - toggle camera elevation up/down
+
+
+<li>y - RotateY(incr) (denoted "Y")
+<li>Y - RotateY(-incr) (denoted "Y<sup>-1</sup>")
+<li>x - RotateX(incr)
+<li>X - RotateX(-incr)
+<li>z - RotateZ(incr)
+<li>Z - RotateZ(-incr)
+<li>o - Reset to identity
+  <li>p, q, r - test RotateZ(-35) * RotateY(60) * RotateZ(55) one step at a time (works in intrinsic mode only)
+	<br>
+    (this should approximately undo the effect of RotateY(-45) * RotateX(-45), using the ZYZ ordering)
+
+<li>
+</ul>
+
+
+
+
+		<script src="../three/three.js"></script>
+		<script src="../util/cs336util.js"></script>
+		<script src="Rotations.js"></script>
+		<script>window.onload = main</script>
+</body>
+</html>

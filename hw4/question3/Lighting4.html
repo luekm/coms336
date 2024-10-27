@@ -1,0 +1,47 @@
+<!--  Demo of lighting using more detailed material and light
+properties.  Same as Lighting2c otherwise.  Only changes are in
+the fragment shader, which now gets material and light properties
+as 3x3 matrices.  See Lighting3.js.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Light/material properties</title>
+</head>
+
+<body>
+	<canvas id="theCanvas" width="600" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+<p>
+Keyboard controls for light position and direction.  Initially, the
+light object is at 0, 4, 0 and is rotated 90 degrees clockwise about its x-axis so
+negative z-axis is pointing at origin.  The yellow line is aligned with
+the object's negative z-azis.
+(I.e. it is "looking" down at the origin):
+<ul style="list-style:none;">
+<li>a, d - move light left, right (along its x axis)
+<li>w, s - move light down, up (this is "forward" and "back" where light actually moves up/down along its z axis; notice
+	that as you press the w key, the shadow gets larger)
+<li>r, f - move light farther, closer (this is "up" and "down" where light will move along its y axis)
+<li>i, k - look up, look down (light will initially turn away/towards you)
+<li>j, l - turn left, turn right (rotate about world y, so has no effect initially)
+<li>O - face origin (must not be aligned with y axis!)
+<li>I, J, K, L - orbit down, right, up, left about origin
+<li>x, X, y, Y, z, Z - positive/negative rotations about light's own axis
+<li>SPACE - pause rotation of cube
+
+
+
+</ul>
+
+    <script src="../three/three.js"></script>
+    <script src="../util/cs336util.js"></script>
+		<script src="../hierarchy/CS336Object.js"></script>
+		<script src="Lighting4.js"></script>
+		<script>window.onload = main</script>
+</body>
+</html>

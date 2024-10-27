@@ -1,0 +1,36 @@
+
+<!--  Demo of lighting using more detailed material and light
+properties.  Same as Lighting2c otherwise.  Only changes are in
+the fragment shader, which now gets material and light properties
+as 3x3 matrices.  See Lighting3.js.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Light/material properties</title>
+</head>
+
+<body>
+	<canvas id="theCanvas" width="600" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+<p>
+Keyboard controls:
+<ul style="list-style:none;">
+<li>SPACE - pause rotation
+<li>x - rotate about x axis
+<li>y - rotate about y axis
+<li>z - rotate about z axis
+<li>o - Reset to initial state
+<li>
+</ul>
+
+  <script src="../three/three.js"></script>
+  <script src="../util/cs336util.js"></script>
+		<script src="Lighting3.js"></script>
+		<script>window.onload = main</script>
+</body>
+</html>

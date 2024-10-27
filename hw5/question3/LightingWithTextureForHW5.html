@@ -1,0 +1,56 @@
+
+<!--
+Same as Lighting3 but includes a model and a texture.
+Note use of the Camera object, which is a subtype of
+CS336Object that also encapsulates view and projection
+matrices and a function for interpreting key controls.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Light/material properties</title>
+</head>
+
+<body>
+	<canvas id="theCanvas" width="600" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+<p>
+Keyboard controls:
+<ul style="list-style:none;">
+
+<p>
+  <li>SPACE - pause rotation
+  <li>x - rotate about x axis
+  <li>y - rotate about y axis
+  <li>z - rotate about z axis
+</ul>
+  <p>
+  Camera controls:
+  <ul style="list-style:none;">
+  <li>w, a, s, d - move forward, left, back, right
+  <li>r, f - move up, down
+  <li>i, j, k, l - look up, left, down, right
+  <li>I, J, K, L - orbit down, right, up, left
+  <li>O - face origin
+  <li>p - put camera at origin
+  <li>W - decrease fov
+  <li>S - increase fov
+  <li>1, 2, 3, 4, 5 - change texture parameters
+</ul>
+
+
+
+  <script src="../three/three.js"></script>
+  <script src="../three/OBJLoader.js"></script>
+  <script src="../util/cs336util.js"></script>
+  <script src="../hierarchy/CS336Object.js"></script>
+  <script src="../hierarchy/Camera.js"></script>
+
+		<script src="LightingWithTextureForHW5.js"></script>
+		<script>window.onload = main</script>
+</body>
+</html>

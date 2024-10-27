@@ -1,0 +1,10 @@
+The easiest way I've found to run this code and interact with the graphics is to use a dedicated server preview tool within VSCode.
+
+Namely the extension: "Live Preview" made by Microsoft.   
+
+You can additionally host your own server and run it but the extension is much easier.
+
+The various hw folders contain different problems, to view the graphics, go to the html file
+and use the live preview button in the top right of VSCode.
+    
+HW6 is the final project.
